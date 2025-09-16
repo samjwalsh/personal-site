@@ -50,7 +50,7 @@ export default function RootLayout({
       <body className="font-mono antialiased" data-theme="light">
         {/* Header */}
         <header className="sticky top-0 z-40 border-b-2 border-black bg-[var(--card-bg)] shadow-[6px_6px_0_0_var(--elev)]">
-          <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+          <div className="mx-auto flex max-w-5xl items-center justify-between overflow-clip px-6 py-4">
             <Link
               href="/"
               className="mr-4 font-medium tracking-tight hover:opacity-80"
