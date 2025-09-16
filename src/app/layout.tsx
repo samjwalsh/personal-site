@@ -4,6 +4,7 @@ import Link from "next/link";
 import { type Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeToggle } from "@/components/theme-toggle";
+import TextLink from "@/components/text-link";
 
 export const metadata: Metadata = {
   title: "Sam Walsh",
@@ -49,44 +50,39 @@ export default function RootLayout({
       <body className="font-mono antialiased" data-theme="light">
         {/* Header */}
         <header className="sticky top-0 z-40 border-b-2 border-black bg-[var(--card-bg)] shadow-[6px_6px_0_0_var(--elev)]">
-          <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
+          <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
             <Link
               href="/"
-              className="font-medium tracking-tight hover:opacity-80"
+              className="mr-4 font-medium tracking-tight hover:opacity-80"
             >
               Sam Walsh
             </Link>
             <nav className="flex items-center gap-3 text-sm">
               <ThemeToggle />
-              <a
-                href="https://github.com/samjw"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:opacity-80"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:opacity-80"
-              >
-                LinkedIn
-              </a>
-              <a href="mailto:hello@samwal.sh" className="neo-btn">
+              <TextLink
+                external
+                text="GitHub"
+                link="https://github.com/samjwalsh"
+              />
+              <TextLink
+                external
+                text="LinkedIn"
+                link="https://www.linkedin.com/in/sam-walsh-019855296/"
+              />
+              <a href="mailto:sam@samjw.ie" className="neo-btn">
                 Contact
               </a>
             </nav>
           </div>
+          <div className="absolute top-0 right-0 m-4"></div>
         </header>
 
         {/* Main content */}
-        <main className="mx-auto max-w-3xl px-6 py-16">{children}</main>
+        <main className="mx-auto max-w-5xl px-6 py-16">{children}</main>
 
         {/* Footer */}
         <footer className="border-t-2 border-black bg-[var(--card-bg)]">
-          <div className="mx-auto max-w-3xl px-6 py-8 text-xs text-[var(--muted)]">
+          <div className="mx-auto max-w-5xl px-6 py-8 text-xs text-[var(--muted)]">
             © {new Date().getFullYear()} Sam Walsh. All rights reserved.
           </div>
         </footer>

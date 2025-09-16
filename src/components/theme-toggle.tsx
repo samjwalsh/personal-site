@@ -49,7 +49,7 @@ export function ThemeToggle() {
       type="button"
       aria-label={`Switch to ${label} mode`}
       onClick={() => setTheme(next)}
-      className="neo-btn-ghost text-sm"
+      className="neo-btn-ghost mr-2 text-sm"
     >
       <span aria-hidden>{icon}</span>
       <span className="sr-only">{label} mode</span>
