@@ -57,7 +57,7 @@ export default function RootLayout({
             >
               Sam Walsh
             </Link>
-            <nav className="flex items-center gap-3 text-sm">
+            <nav className="flex items-center gap-4 text-sm">
               <ThemeToggle />
               <TextLink
                 external
